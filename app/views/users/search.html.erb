@@ -1,0 +1,17 @@
+
+<div class="container">
+	<div class="row">
+		<dev class="col-md-3 offset-md-4">
+			<div class="card" style="width: 18rem;">
+			  <img class="card-img-top" src=<%= @user.url %>  alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">  <%= @user.email %> </h5>
+			    <p class="card-text"> <%= @user.bios %> </p>
+			    <a href="<%= interactions_path(like: false, user_two_id: @user.id) %>" data-method="post" class="btn btn-primary">dislike</a>
+			    <a href="<%= interactions_path(like: true, user_two_id: @user.id) %>" data-method="post" class="btn btn-primary">like</a>
+			  </div>
+			</div>
+		</div>
+	</dev>	
+</div>
+
